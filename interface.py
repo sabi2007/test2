@@ -6,7 +6,7 @@ client = OpenAI(
 )
 
 messages = [
-    {"role": "system", "content": "従順な執事です。"},
+    {"role": "system", "content": "従順なメイドです。"},
 ]
 
 print("bot: 起動しました。exit で終了します。")
@@ -23,7 +23,7 @@ while True:
     resp = client.chat.completions.create(
         model="bonsai",
         messages=messages,
-        temperature=0.7
+        temperature=0.9
     )
 
     answer = resp.choices[0].message.content
